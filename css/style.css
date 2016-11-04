@@ -1,0 +1,96 @@
+#container{
+	width: 1170px;
+	margin:0 auto;
+	margin-top: 70px;
+
+}
+.col-xs-9{width: 80%;float: right;}
+
+.footer{
+	background:black;
+	width:100%;
+	height:50px;
+	margin-top:15px;
+	overflow: hidden;
+	clear: both;
+	
+}
+.footer p{
+	display: block;
+	text-align: center;
+	padding-top: 15px;
+	color: white;
+
+}
+
+
+/*outbox弹窗*/
+.outlogin{z-index: 999; width: 100%;height: 320px;}
+#outlogin_form input:focus{border:1px solid #0290D8;}
+#outlogin_form h3{margin-left: 10px;padding: 10px 10px 5px 0px;display: block; width: 240px; }
+#outlogin_form{padding:10px 0px 10px 35px;color: #526163;}
+#outlogin_form span a{display: block; color: #526163; margin:5px 10px 5px 2px;float:left;}
+#outlogin_form #outlogin-help,#outlogin-loginAuto{display: block; color: #526163; margin:5px 12px; float:right;}
+#outlogin_tbl{width: 90%; border: 0px solid gray; }
+#outlogin_tbl #outlogin-username,#outlogin-password,#outlogin-confirmPwd{width: 92%;padding: 5px 0px;margin:5px 10px;}
+#outlogin_tbn{width: 100px; margin:5px 35px;padding-left:30px;   }
+#outlogin-errInfo{display: block;height: 26px; padding-top: 4px; padding-left: 15%;}
+#outlogin-btn-td,#outlogin-last-td{display: block; padding-left: 10px;}
+
+/*outregister弹窗*/
+.outregister{z-index: 999; width: 100%;height: 320px;}
+#outregister_form input:focus{border:1px solid #0290D8;}
+#outregister_form h3{margin-left: 10px;padding: 10px 10px 5px 0px;display: block; width: 240px; }
+#outregister_form{padding:10px 0px 10px 35px;color: #526163;}
+#outregister_form span a{display: block; color: #526163; margin:5px 10px 5px 2px;float:left;}
+#outregister_form #outregister-help{display: block; color: #526163; margin:5px 25px; float:right;}
+#outregister_tbl{width: 90%; border: 0px solid gray; }
+#outregister_tbl #outregister-username,#outregister-password,#outregister-confirmPwd{width: 92%;padding: 5px 0px;margin:5px 10px;}
+#outregister_tbn{width: 100px; margin:5px 35px;padding-left:30px;   }
+#outregister-errInfo{display: block;height: 26px; padding-top: 4px; padding-left: 15%;}
+#outregister-btn-td,#outregister-last-td{display: block; padding-left: 10px;}
+
+
+
+.row .col-lg-4{
+    text-align: center;
+}
+#carousel-example-generic{margin-bottom: 20px;}
+
+/*左侧菜单*/
+.col-xs-3 {
+    width: 15%;
+}
+ul.nav-tabs{
+    width: 140px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+ul.nav-tabs li{
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+ul.nav-tabs li:first-child{
+    border-top: none;
+}
+ul.nav-tabs li a{
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+    color: #fff;
+    background: #0088cc;
+    border: 1px solid #0088cc;
+}
+ul.nav-tabs li:first-child a{
+    border-radius: 4px 4px 0 0;
+}
+ul.nav-tabs li:last-child a{
+    border-radius: 0 0 4px 4px;
+}
+ul.nav-tabs.affix{
+    top: 10px; /* Set the top position of pinned element */
+}
+.popover-btn{width: 280px;margin:100px 100px 100px 150px;}

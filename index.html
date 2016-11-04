@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BootStrap</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+<body role="document" data-spy="scroll" data-target="#myScrollspy">
+
+<!-- 导航条 -->
+	<div class="navbar navbar-inverse ">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Bootstrap 案例</a>
+	    </div>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">首页</a></li>
+	        <li><a href="#about">关于我们</a></li>
+	        <li><a href="#contact">帮助</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多<span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#button-header">按钮</a></li>
+	            <li><a href="#table-header">表格</a></li>
+	            <li><a href="#pic-header">照片</a></li>
+	            <li class="divider"></li>
+	            <li class="dropdown-header">下拉菜单的一个标题</li>
+	            <li><a href="#label-header">标签</a></li>
+	            <li><a href="#badge-header">徽章</a></li>
+	            <li><a href="#navbar-header">导航</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a data-toggle="modal" data-target="#loginBox">登录</a></li>
+	        <li><a data-toggle="modal" data-target="#registerBox">注册</a></li>
+	      </ul>
+	    </div><!--/.nav-collapse -->
+	  </div>
+	</div>
+
+
+<!-- 登录弹窗 -->
+	<div class="modal fade" id="loginBox" >
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+	        <h4 class="modal-title">用户登录</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="outlogin">
+	          <div class="outloginForm">
+	                      <form id="outlogin_form">
+	                        
+	                        <table id="outlogin_tbl">
+	                        <tr>
+	                          <td rowspan="5"><img src="images/tsideCode.png" style="width:170px;height:170px;"></td>
+	                          <td><h3>咋回来了，赶紧登录!</h3></td>
+	                        </tr>
+	                          <tr>
+	                            
+	                            <td colspan="2"><span id="outlogin-errInfo"></span></td>
+	                          </tr>
+	                          <tr>
+	                            <td colspan="2"><input type="text" name="username" id="outlogin-username" placeholder="用户名"></td>
+	                          </tr>
+	                          <tr>
+	                            <td colspan="2"><input type="password" name="password" id="outlogin-password" placeholder="请输入密码"></td>
+	                          </tr>
+	                          <tr>
+	                            <td id="outlogin-btn-td">
+	                              <button type="button" id="outlogin_btn" class="btn btn-success">登录</button>
+	                              <p id="outlogin-loginAuto"><input  type="checkbox" name="loginAuto" value="loginAuto">下次自动登录</p>
+	                            </td>
+	                          </tr>
+	                          <tr>
+	                            <td>
+	                            扫描二维码快速登录
+	                            </td>
+	                            <td id="outlogin-last-td">
+	                            <span><a href="#">忘记密码</a></span>
+	                            <span><a data-toggle="modal" data-target="#registerBox" data-dismiss="modal">立即注册</a></span>
+	                            <span><a id="outlogin-help" href="#">帮助中心</a></span>
+	                            </td>
+	                          </tr>
+	                        </table>
+	                      </form>
+	              </div>
+	        </div>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- 注册弹窗 -->
+	<div class="modal fade" id="registerBox" >
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+	        <h4 class="modal-title">新用户注册</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="outregister">
+	          <div class="outregisterForm">
+	                      <form id="outregister_form">
+	                        
+	                        <table id="outregister_tbl">
+	                        <tr>
+	                          <td><h3>新来的吧，快点注册!</h3></td>
+	                        </tr>
+	                          <tr>
+	                            <td colspan="2"><span id="outregister-errInfo"></span></td>
+	                          </tr>
+	                          <tr>
+	                            <td colspan="2"><input type="text" name="username" id="outregister-username" placeholder="用户名"></td>
+	                          </tr>
+	                          <tr>
+	                            <td colspan="2"><input type="password" name="password" id="outregister-password" placeholder="请输入密码"></td>
+	                          </tr>
+	                           <tr>
+	                            <td colspan="2"><input type="password" name="confirmPwd" id="outregister-confirmPwd" placeholder="再次输入密码"></td>
+	                          </tr>
+	                          <tr>
+	                            <td id="outregister-btn-td">
+	                              <button type="button" id="outregister_btn" class="btn btn-success">注册</button>
+	                            </td>
+	                          </tr>
+	                          <tr>
+	                            <td id="outregister-last-td">
+	                            <span><a >已有账号，</a></span>
+	                            <span><a data-toggle="modal" data-target="#loginBox" data-dismiss="modal">立即登录</a></span>
+	                            <span><a id="outregister-help" href="#">帮助中心</a></span>
+	                            </td>
+	                          </tr>
+	                        </table>
+	                      </form>
+	              </div>
+	        </div>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+<!-- 主体 -->
+	<div id="container" class="row" >
+		
+		<div class="row">
+		<!-- 左侧固定菜单 -->
+        <div class="col-xs-3" id="myScrollspy">
+	            <ul class="nav nav-tabs nav-stacked" id="myNav">
+	                <li class="active"><a href="#carousel-example-generic">轮播图</a></li>
+	                <li><a href="#defineSelf">自定义内容</a></li>
+	                <li><a href="#bigScreen">巨幕</a></li>
+	                <li><a href="#button-header">按钮</a></li>
+	                <li><a href="#table-header">表格</a></li>
+	                <li><a href="#pic-header">图片样式</a></li>
+	                <li><a href="#label-header">标签</a></li>
+	                <li><a href="#badge-header">徽章</a></li>
+	                <li><a href="#nav-header">导航</a></li>
+	                <li><a href="#navbar-header">导航条</a></li>
+	                <li><a href="#alert-header">警告通知</a></li>
+	                <li><a href="#progress-header">进度条</a></li>
+	                <li><a href="#list-group">列表</a></li>
+	                <li><a href="#panel-header">带标题的面板</a></li>
+	                <li><a href="#well-header">消息墙</a></li>
+	                <li><a href="#popover-header">弹出框</a></li>
+	                <li><a href="#pagination-header">分页翻页</a></li>
+	                <li><a href="#media-header">多媒体对象</a></li>
+	                <li><a href="#"></a></li>
+
+
+	            </ul>
+	    </div>
+        <div class="col-xs-9">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	        <ol class="carousel-indicators">
+	          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	        </ol> 
+	        <div class="carousel-inner" role="listbox">
+	          <div class="item active">
+	            <img data-src="holder.js/1140x500/auto/index.htm#777:#555/text:First slide" tppabs="http://v3.bootcss.com/examples/theme/holder.js/1140x500/auto/#777:#555/text:First slide" alt="First slide" src="images/s-banner1.jpg">
+	            <div class="container">
+		            <div class="carousel-caption">
+		              <h1>ACDC乐队</h1>
+		              <p>AC/DC是由原“地下天鹅绒乐队”（The Velvet Underground）成员马尔科姆·扬（Malcolm Young）创建，成立于1973年的摇滚、金属类型的乐队。</p>
+		              <p><a class="btn btn-lg btn-primary" href="http://www.xiami.com/search?key=acdc" role="button">查看歌单</a></p>
+		            </div>
+	          	</div>
+	          </div>
+	          <div class="item">
+	            <img data-src="holder.js/1140x500/auto/index.htm#666:#444/text:Second slide" tppabs="http://v3.bootcss.com/examples/theme/holder.js/1140x500/auto/#666:#444/text:Second slide" alt="Second slide" src="images/s-banner2.jpg">
+	            <div class="container">
+		            <div class="carousel-caption">
+		              <h1>唐朝乐队</h1>
+		              <p>唐朝乐队，成立于1988年，中国内地重金属摇滚乐队。</p>
+		              <p><a class="btn btn-lg btn-primary" href="https://www.baidu.com/link?url=k5uQ_NSVEJsgLQaxpAfJg0Yg45QHFoy_mCkCnjNmQ85q5I4h3koGwTuK--rUtvTmYFs0aj2MW5Far9ofreaosq&wd=&eqid=e523fb8e00007d5d0000000357f8bb55" role="button">查看歌单</a></p>
+		            </div>
+	          	</div>
+	          </div>
+	          <div class="item">
+	            <img data-src="holder.js/1140x500/auto/index.htm#555:#333/text:Third slide" tppabs="http://v3.bootcss.com/examples/theme/holder.js/1140x500/auto/#555:#333/text:Third slide" alt="Third slide" src="images/s-banner3.jpg">
+	            <div class="container">
+		            <div class="carousel-caption">
+		              <h1>金属礼</h1>
+		              <p>金属礼，是原Black Sabbath的主唱Ronnie James Dio发明的。金属礼手势的意思是山羊的像形——因为黑山羊是魔鬼的象征，所以这样的手势正好适合金属那种异教情结 ，也就是金属礼。</p>
+		              
+		            </div>
+	          	</div>
+	          </div>
+	        </div>
+	        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	          <span class="glyphicon glyphicon-chevron-left"></span>
+	          <span class="sr-only">Previous</span>
+	        </a>
+	        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	          <span class="glyphicon glyphicon-chevron-right"></span>
+	          <span class="sr-only">Next</span>
+	        </a>
+	      </div>
+
+	      <!-- 自定义内容 -->
+	      <div id="defineSelf" class="row">
+	        <div class="col-lg-4">
+	          <img class="img-circle" src="http://d.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=e82d2b4cd358ccbf0fb1bd6878b1d75b/8ad4b31c8701a18bdc2590b19c2f07082938fe06.jpg" alt="Generic placeholder image"  style="width: 140px; height: 140px;">
+	          <h2>ACDC乐队</h2>
+	          <p>布赖恩·约翰逊（Brian Johnson）—　主唱（1980年－）</p>
+			  <p>安格斯·扬（Angus Young）—　吉他（1973年－）</p>
+			  <p>马尔科姆·扬（Malcolm Young）—　吉他（1973年－）</p>
+	  		  <p>克里夫·威廉姆斯（Cliff Williams）—　贝斯（1977年－）</p>
+			  <p>菲尔·路德（Phil Rudd）—　鼓和打击乐器（1994年－）</p>
+	          <p></p>
+	        </div><!-- /.col-lg-4 -->
+	        <div class="col-lg-4">
+	          <img class="img-circle" src="http://h.hiphotos.baidu.com/baike/crop%3D0%2C1%2C600%2C396%3Bc0%3Dbaike80%2C5%2C5%2C80%2C26/sign=e71dacb50b3b5bb5aa987abe0be3f908/a044ad345982b2b71f8b94da39adcbef76099b9c.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+	          <h2>唐朝乐队</h2>
+	          <p>代表作：梦回唐朝、飞翔鸟、太阳、国际歌</p> 
+				<p>主唱：丁武</p> 
+				<p>吉他手：陈磊</p> 
+				<p>贝斯手：顾忠 </p>
+				<p>鼓手：赵年 </p>
+	          <p></p>
+	        </div><!-- /.col-lg-4 -->
+	        <div class="col-lg-4">
+	          <img class="img-circle" src="http://b.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=4a7a92343912b31bd361c57be7715d1f/0df431adcbef760972c197ec2edda3cc7dd99efe.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+	          <h2>金属礼</h2>
+	          <p>不要将“金属礼”与美国“我爱你”的手势相混淆，“我爱你”的手势要求将拇指同时打开。在中国，由于摇滚文化传播的匮乏，经常见到有人把“爱”的手势与金属礼相混淆的情况。比如在中国著名的摇滚音乐节——北京迷笛音乐节上，摇滚手势被以讹传讹地等同为了爱的手势。别再一个朋克音乐会上行金属礼，你可以伸一根手指。传说金属和朋克势不两立。 </p>
+	          <p></p>
+	        </div><!-- /.col-lg-4 -->
+	      </div>
+
+	       <!-- 巨幕 -->
+	      <div id="bigScreen" class="jumbotron">
+	        <h1>下面介绍Bootstrap的世界!</h1>
+	        <p>这是一个巨幕，我觉得是和轮播图并列的。可以突出的展示一些东西。</p>
+	        <p>Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。</p>
+	        <p><a href="http://getbootstrap.com/" class="btn btn-primary btn-lg" role="button">更多信息 »</a></p>
+	      </div>
+
+            <!-- 按钮 -->
+	      <div id="button-header" class="page-header">
+	        <h1>不同样式按钮</h1>
+	      </div>
+	      <p>
+	        <button type="button" class="btn btn-lg btn-default">Default</button>
+	        <button type="button" class="btn btn-lg btn-primary">Primary</button>
+	        <button type="button" class="btn btn-lg btn-success">Success</button>
+	        <button type="button" class="btn btn-lg btn-info">Info</button>
+	        <button type="button" class="btn btn-lg btn-warning">Warning</button>
+	        <button type="button" class="btn btn-lg btn-danger">Danger</button>
+	        <button type="button" class="btn btn-lg btn-link" >Link</button>
+	        <button type="button" class="btn btn-lg btn-info" data-toggle="collapse" data-parent="#accordion" 
+	        				   href="#collapseOne" style="-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;">看代码</button>
+	        <div class="panel panel-default">
+	        		<div id="collapseOne" class="panel-collapse collapse in">
+	        			<div class="panel-body">
+	        				<textarea style="width:600px; height:150px;">
+<button type="button" class="btn btn-lg btn-default">Default</button>
+<button type="button" class="btn btn-lg btn-primary">Primary</button>
+<button type="button" class="btn btn-lg btn-success">Success</button>
+<button type="button" class="btn btn-lg btn-info">Info</button>
+<button type="button" class="btn btn-lg btn-warning">Warning</button>
+<button type="button" class="btn btn-lg btn-danger">Danger</button>
+<button type="button" class="btn btn-lg btn-link">Link</button>
+</textarea>
+	        			</div>
+	        		</div>
+	        	</div>
+	      </p>
+	      <p>
+	        <button type="button" class="btn btn-default">Default</button>
+	        <button type="button" class="btn btn-primary">Primary</button>
+	        <button type="button" class="btn btn-success">Success</button>
+	        <button type="button" class="btn btn-info">Info</button>
+	        <button type="button" class="btn btn-warning">Warning</button>
+	        <button type="button" class="btn btn-danger">Danger</button>
+	        <button type="button" class="btn btn-link">Link</button>
+	      </p>
+	      <p>
+	        <button type="button" class="btn btn-sm btn-default">Default</button>
+	        <button type="button" class="btn btn-sm btn-primary">Primary</button>
+	        <button type="button" class="btn btn-sm btn-success">Success</button>
+	        <button type="button" class="btn btn-sm btn-info">Info</button>
+	        <button type="button" class="btn btn-sm btn-warning">Warning</button>
+	        <button type="button" class="btn btn-sm btn-danger">Danger</button>
+	        <button type="button" class="btn btn-sm btn-link">Link</button>
+	      </p>
+	      <p>
+	        <button type="button" class="btn btn-xs btn-default">Default</button>
+	        <button type="button" class="btn btn-xs btn-primary">Primary</button>
+	        <button type="button" class="btn btn-xs btn-success">Success</button>
+	        <button type="button" class="btn btn-xs btn-info">Info</button>
+	        <button type="button" class="btn btn-xs btn-warning">Warning</button>
+	        <button type="button" class="btn btn-xs btn-danger">Danger</button>
+	        <button type="button" class="btn btn-xs btn-link">Link</button>
+	      </p>
+	      <!-- 表格 -->
+	      <div id="table-header" class="page-header">
+	        <h1>表格</h1>
+	      </div>
+	      <div class="row">
+	        <div class="col-md-6">
+	          <table class="table">
+	            <thead>
+	              <tr>
+	                <th>#</th>
+	                <th>First Name</th>
+	                <th>Last Name</th>
+	                <th>Username</th>
+	              </tr>
+	            </thead>
+	            <tbody>
+	              <tr>
+	                <td>1</td>
+	                <td>Mark</td>
+	                <td>Otto</td>
+	                <td>@mdo</td>
+	              </tr>
+	              <tr>
+	                <td>2</td>
+	                <td>Jacob</td>
+	                <td>Thornton</td>
+	                <td>@fat</td>
+	              </tr>
+	              <tr>
+	                <td>3</td>
+	                <td>Larry</td>
+	                <td>the Bird</td>
+	                <td>@twitter</td>
+	              </tr>
+	            </tbody>
+	          </table>
+	        </div>
+	        <div class="col-md-6">
+	          <table class="table table-striped">
+	            <thead>
+	              <tr>
+	                <th>#</th>
+	                <th>First Name</th>
+	                <th>Last Name</th>
+	                <th>Username</th>
+	              </tr>
+	            </thead>
+	            <tbody>
+	              <tr>
+	                <td>1</td>
+	                <td>Mark</td>
+	                <td>Otto</td>
+	                <td>@mdo</td>
+	              </tr>
+	              <tr>
+	                <td>2</td>
+	                <td>Jacob</td>
+	                <td>Thornton</td>
+	                <td>@fat</td>
+	              </tr>
+	              <tr>
+	                <td>3</td>
+	                <td>Larry</td>
+	                <td>the Bird</td>
+	                <td>@twitter</td>
+	              </tr>
+	            </tbody>
+	          </table>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-md-6">
+	          <table class="table table-bordered">
+	            <thead>
+	              <tr>
+	                <th>#</th>
+	                <th>First Name</th>
+	                <th>Last Name</th>
+	                <th>Username</th>
+	              </tr>
+	            </thead>
+	            <tbody>
+	              <tr>
+	                <td rowspan="2">1</td>
+	                <td>Mark</td>
+	                <td>Otto</td>
+	                <td>@mdo</td>
+	              </tr>
+	              <tr>
+	                <td>Mark</td>
+	                <td>Otto</td>
+	                <td>@TwBootstrap</td>
+	              </tr>
+	              <tr>
+	                <td>2</td>
+	                <td>Jacob</td>
+	                <td>Thornton</td>
+	                <td>@fat</td>
+	              </tr>
+	              <tr>
+	                <td>3</td>
+	                <td colspan="2">Larry the Bird</td>
+	                <td>@twitter</td>
+	              </tr>
+	            </tbody>
+	          </table>
+	        </div>
+	        <div class="col-md-6">
+	          <table class="table table-condensed">
+	            <thead>
+	              <tr>
+	                <th>#</th>
+	                <th>First Name</th>
+	                <th>Last Name</th>
+	                <th>Username</th>
+	              </tr>
+	            </thead>
+	            <tbody>
+	              <tr>
+	                <td>1</td>
+	                <td>Mark</td>
+	                <td>Otto</td>
+	                <td>@mdo</td>
+	              </tr>
+	              <tr>
+	                <td>2</td>
+	                <td>Jacob</td>
+	                <td>Thornton</td>
+	                <td>@fat</td>
+	              </tr>
+	              <tr>
+	                <td>3</td>
+	                <td colspan="2">Larry the Bird</td>
+	                <td>@twitter</td>
+	              </tr>
+	            </tbody>
+	          </table>
+	        </div>
+	      </div>
+	      <!-- 图片样式 -->
+	      <div id="pic-header" class="page-header">
+	        <h1>图片样式</h1>
+	      </div>
+	      <img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" src="images/1.jpg" style="width: 200px; height: 200px;">
+	      <img data-src="holder.js/200x200" class="img-rounded" alt="200x200" src="images/1.jpg" style="width: 200px; height: 200px;">
+	      <img data-src="holder.js/200x200" class="img-circle" alt="200x200" src="images/1.jpg" style="width: 200px; height: 200px;">
+
+	      <!-- 标签 -->
+	      <div id="label-header" class="page-header">
+	        <h1>不同样式的标签</h1>
+	      </div>
+	      <h1>
+	        <span class="label label-default">Default</span>
+	        <span class="label label-primary">Primary</span>
+	        <span class="label label-success">Success</span>
+	        <span class="label label-info">Info</span>
+	        <span class="label label-warning">Warning</span>
+	        <span class="label label-danger">Danger</span>
+	      </h1>
+	      <h2>
+	        <span class="label label-default">Default</span>
+	        <span class="label label-primary">Primary</span>
+	        <span class="label label-success">Success</span>
+	        <span class="label label-info">Info</span>
+	        <span class="label label-warning">Warning</span>
+	        <span class="label label-danger">Danger</span>
+	      </h2>
+	      <h3>
+	        <span class="label label-default">Default</span>
+	        <span class="label label-primary">Primary</span>
+	        <span class="label label-success">Success</span>
+	        <span class="label label-info">Info</span>
+	        <span class="label label-warning">Warning</span>
+	        <span class="label label-danger">Danger</span>
+	      </h3>
+	      <h4>
+	        <span class="label label-default">Default</span>
+	        <span class="label label-primary">Primary</span>
+	        <span class="label label-success">Success</span>
+	        <span class="label label-info">Info</span>
+	        <span class="label label-warning">Warning</span>
+	        <span class="label label-danger">Danger</span>
+	      </h4>
+	      <h5>
+	        <span class="label label-default">Default</span>
+	        <span class="label label-primary">Primary</span>
+	        <span class="label label-success">Success</span>
+	        <span class="label label-info">Info</span>
+	        <span class="label label-warning">Warning</span>
+	        <span class="label label-danger">Danger</span>
+	      </h5>
+	      <h6>
+	        <span class="label label-default">Default</span>
+	        <span class="label label-primary">Primary</span>
+	        <span class="label label-success">Success</span>
+	        <span class="label label-info">Info</span>
+	        <span class="label label-warning">Warning</span>
+	        <span class="label label-danger">Danger</span>
+	      </h6>
+	      <p>
+	        <span class="label label-default">Default</span>
+	        <span class="label label-primary">Primary</span>
+	        <span class="label label-success">Success</span>
+	        <span class="label label-info">Info</span>
+	        <span class="label label-warning">Warning</span>
+	        <span class="label label-danger">Danger</span>
+	      </p>
+
+	      <!-- 徽章 -->
+	      <div id="badge-header" class="page-header">
+	        <h1>徽章</h1>
+	      </div>
+	      <p>
+	        <a href="#">Inbox <span class="badge">42</span></a>
+	      </p>
+	      <ul class="nav nav-pills" role="tablist">
+	        <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+	        <li role="presentation"><a href="#">Profile</a></li>
+	        <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+	      </ul>
+
+	      <!-- 导航 -->
+	      <div id="nav-header" class="page-header">
+	        <h1>导航</h1>
+	      </div>
+	      <ul class="nav nav-tabs" role="tablist">
+	        <li role="presentation" class="active"><a href="#">Home</a></li>
+	        <li role="presentation"><a href="#">Profile</a></li>
+	        <li role="presentation"><a href="#">Messages</a></li>
+	      </ul>
+	      <ul class="nav nav-pills" role="tablist">
+	        <li role="presentation" class="active"><a href="#">Home</a></li>
+	        <li role="presentation"><a href="#">Profile</a></li>
+	        <li role="presentation"><a href="#">Messages</a></li>
+	      </ul>
+	      <div class="header">
+	        <ul class="nav nav-pills pull-right" role="tablist">
+	          <li class="active"><a href="#">Home</a></li>
+	          <li><a href="#">Profile</a></li>
+	          <li><a href="#">Messages</a></li>
+	        </ul>
+	        <h3 class="text-muted">Project name</h3>
+	      </div>
+
+	      <!-- 导航条 -->
+	      <div id="navbar-header" class="page-header">
+	        <h1>导航条</h1>
+	      </div>
+	      <div class="navbar navbar-default">
+	        <div class="container">
+	          <div class="navbar-header">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	              <span class="sr-only">Toggle navigation</span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="#">Project name</a>
+	          </div>
+	          <div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav">
+	              <li class="active"><a href="#">Home</a></li>
+	              <li><a href="#about">About</a></li>
+	              <li><a href="#contact">Contact</a></li>
+	              <li class="dropdown">
+	                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+	                <ul class="dropdown-menu" role="menu">
+	                  <li><a href="#">Action</a></li>
+	                  <li><a href="#">Another action</a></li>
+	                  <li><a href="#">Something else here</a></li>
+	                  <li class="divider"></li>
+	                  <li class="dropdown-header">Nav header</li>
+	                  <li><a href="#">Separated link</a></li>
+	                  <li><a href="#">One more separated link</a></li>
+	                </ul>
+	              </li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div>
+	      </div>
+	      <div class="navbar navbar-inverse">
+	        <div class="container">
+	          <div class="navbar-header">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+	              <span class="sr-only">Toggle navigation</span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="#">Project name</a>
+	          </div>
+	          <div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav">
+	              <li class="active"><a href="#">Home</a></li>
+	              <li><a href="#about">About</a></li>
+	              <li><a href="#contact">Contact</a></li>
+	              <li class="dropdown">
+	                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+	                <ul class="dropdown-menu" role="menu">
+	                  <li><a href="#">Action</a></li>
+	                  <li><a href="#">Another action</a></li>
+	                  <li><a href="#">Something else here</a></li>
+	                  <li class="divider"></li>
+	                  <li class="dropdown-header">Nav header</li>
+	                  <li><a href="#">Separated link</a></li>
+	                  <li><a href="#">One more separated link</a></li>
+	                </ul>
+	              </li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div>
+	      </div>
+
+	      
+
+
+	<!-- 警告通知 -->
+	      <div id="alert-header" class="page-header">
+	        <h1>警告通知</h1>
+	      </div>
+	      <div class="alert alert-success" role="alert">
+	        <strong>Well done!</strong> You successfully read this important alert message.
+	      </div>
+	      <div class="alert alert-info" role="alert">
+	        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+	      </div>
+	      <div class="alert alert-warning" role="alert">
+	        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+	      </div>
+	      <div class="alert alert-danger" role="alert">
+	        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+	      </div>
+
+	      <!-- 进度条 -->
+	      <div id="progress-header" class="page-header">
+	        <h1>进度条</h1>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-info .active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+	          60%
+	        </div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+	          <span class="sr-only">45% Complete</span>
+	        </div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+	      </div>
+	      <div class="progress">
+	        <div class="progress-bar progress-bar-success" style="width: 35%">
+	        	<span class="sr-only">35% Complete (success)</span>
+	        </div>
+	        <div class="progress-bar progress-bar-warning" style="width: 20%">
+	        	<span class="sr-only">20% Complete (warning)</span>
+	        </div>
+	        <div class="progress-bar progress-bar-danger" style="width: 10%">
+	        	<span class="sr-only">10% Complete (danger)</span>
+	        </div>
+	      </div>
+
+	      <!-- 列表 -->
+	      <div id="list-group" class="page-header">
+	        <h1>列表</h1>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-4">
+	          <ul class="list-group">
+	            <li class="list-group-item">Cras justo odio</li>
+	            <li class="list-group-item">Dapibus ac facilisis in</li>
+	            <li class="list-group-item">Morbi leo risus</li>
+	            <li class="list-group-item">Porta ac consectetur ac</li>
+	            <li class="list-group-item">Vestibulum at eros</li>
+	          </ul>
+	        </div><!-- /.col-sm-4 -->
+	        <div class="col-sm-4">
+	          <div class="list-group">
+	            <a href="#" class="list-group-item active">
+	              Cras justo odio
+	            </a>
+	            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+	            <a href="#" class="list-group-item">Morbi leo risus</a>
+	            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+	            <a href="#" class="list-group-item">Vestibulum at eros</a>
+	          </div>
+	        </div><!-- /.col-sm-4 -->
+	        <div class="col-sm-4">
+	          <div class="list-group">
+	            <a href="#" class="list-group-item active">
+	              <h4 class="list-group-item-heading">List group item heading</h4>
+	              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	            </a>
+	            <a href="#" class="list-group-item">
+	              <h4 class="list-group-item-heading">List group item heading</h4>
+	              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	            </a>
+	            <a href="#" class="list-group-item">
+	              <h4 class="list-group-item-heading">List group item heading</h4>
+	              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	            </a>
+	          </div>
+	        </div><!-- /.col-sm-4 -->
+	      </div>
+
+	      <!-- 带标题的面板 -->
+	      <div id="panel-header" class="page-header">
+	        <h1>带标题的面板</h1>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-4">
+	          <div class="panel panel-default">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">Panel title</h3>
+	            </div>
+	            <div class="panel-body">
+	              Panel content
+	            </div>
+	          </div>
+	          <div class="panel panel-primary">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">Panel title</h3>
+	            </div>
+	            <div class="panel-body">
+	              Panel content
+	            </div>
+	          </div>
+	        </div><!-- /.col-sm-4 -->
+	        <div class="col-sm-4">
+	          <div class="panel panel-success">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">Panel title</h3>
+	            </div>
+	            <div class="panel-body">
+	              Panel content
+	            </div>
+	          </div>
+	          <div class="panel panel-info">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">Panel title</h3>
+	            </div>
+	            <div class="panel-body">
+	              Panel content
+	            </div>
+	          </div>
+	        </div><!-- /.col-sm-4 -->
+	        <div class="col-sm-4">
+	          <div class="panel panel-warning">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">Panel title</h3>
+	            </div>
+	            <div class="panel-body">
+	              Panel content
+	            </div>
+	          </div>
+	          <div class="panel panel-danger">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">Panel title</h3>
+	            </div>
+	            <div class="panel-body">
+	              Panel content
+	            </div>
+	          </div>
+	        </div><!-- /.col-sm-4 -->
+	      </div>
+
+
+	      <!-- 消息墙 -->
+	      <div id="well-header" class="page-header">
+	      	<h1>消息墙</h1>
+	      </div>
+	      <div class="well">
+	              <p>默认的消息墙Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+	       </div>
+
+
+	       <div class="well well-lg"> <!-- 大的消息墙 -->
+	              <p>大的消息墙Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+	       </div>
+	       <div class="well well-sm"> <!-- 小的消息墙 -->
+	              <p>小的消息墙Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+	       </div>
+
+	      <!-- popover -->
+	      <div id="popover-header" class="page-header">
+	      	<h1>弹出框</h1>
+	      </div>
+	      <div class="popover-btn">
+		     <button type="button" class="btn btn-default" title="Popover title"  
+					data-container="body" data-toggle="popover" data-placement="left" 
+					data-content="左侧的 Popover 中的一些内容">
+				左侧的 Popover
+			</button>
+			<button type="button" class="btn btn-primary" title="Popover title"  
+					data-container="body" data-toggle="popover" data-placement="top" 
+					data-content="顶部的 Popover 中的一些内容">
+				顶部的 Popover
+			</button>
+			<button type="button" class="btn btn-success" title="Popover title"  
+					data-container="body" data-toggle="popover" data-placement="bottom" 
+					data-content="底部的 Popover 中的一些内容">
+				底部的 Popover
+			</button>
+			<button type="button" class="btn btn-warning" title="Popover title"  
+					data-container="body" data-toggle="popover" data-placement="right" 
+					data-content="右侧的 Popover 中的一些内容">
+				右侧的 Popover
+			</button>
+
+	      </div> 
+
+<!-- 分页 -->
+			<div id="pagination-header" class="page-header">
+				<h1>分页</h1>
+			</div>	
+				<ul class="pagination pagination-lg">
+				<li><a href="#">&laquo;</a></li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li><a href="#">&raquo;</a></li>
+				</ul><br>
+				<ul class="pagination">
+				    <li><a href="#">&laquo;</a></li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li><a href="#">&raquo;</a></li>
+				</ul><br>
+				<ul class="pagination pagination-sm">
+				    <li><a href="#">&laquo;</a></li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li><a href="#">&raquo;</a></li>
+				</ul>
+
+<!-- 翻页 -->
+			<div class="page-header">
+				<h1>翻页</h1>
+			</div>
+			
+			<ul class="pager">
+			    <li class="previous"><a href="#">&larr; Older</a></li>
+			    <li class="next"><a href="#">Newer &rarr;</a></li>
+			    <hr>
+			    <li><a href="#">Previous</a></li>
+			    <li><a href="#">Next</a></li>
+			    <hr>
+			    <li class="previous disabled"><a href="#">&larr; Older</a></li>
+		        <li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<!-- 多媒体对象 -->
+
+			<div id="media-header" class="page-header">
+				<h1>多媒体对象</h1>
+			</div>
+			
+			<ul class="media-list">
+			    <li class="media">
+			        <a class="pull-left" href="#">
+			            <img class="media-object" src="images/1.jpg"
+			                 alt="通用的占位符图像" style="width:30px;height:30px;">
+			        </a>
+			        <div class="media-body">
+			            <h4 class="media-heading">媒体标题</h4>
+			            <p>这是一些示例文本。这是一些示例文本。
+			                这是一些示例文本。这是一些示例文本。
+			                这是一些示例文本。这是一些示例文本。
+			                这是一些示例文本。这是一些示例文本。
+			                这是一些示例文本。这是一些示例文本。</p>
+			            <!-- 嵌套的媒体对象 -->
+			            <div class="media">
+			                <a class="pull-left" href="#">
+			                    <img class="media-object" src="images/1.jpg"
+			                         alt="通用的占位符图像" style="width:30px;height:30px;">
+			                </a>
+			                <div class="media-body">
+			                    <h4 class="media-heading">嵌套的媒体标题</h4>
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                    <!-- 嵌套的媒体对象 -->
+			                    <div class="media">
+			                        <a class="pull-left" href="#">
+			                            <img class="media-object" src="images/1.jpg"
+			                                 alt="通用的占位符图像" style="width:30px;height:30px;">
+			                        </a>
+			                        <div class="media-body">
+			                            <h4 class="media-heading">嵌套的媒体标题</h4>
+			                            这是一些示例文本。这是一些示例文本。
+			                            这是一些示例文本。这是一些示例文本。
+			                            这是一些示例文本。这是一些示例文本。
+			                            这是一些示例文本。这是一些示例文本。
+			                            这是一些示例文本。这是一些示例文本。
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			            <!-- 嵌套的媒体对象 -->
+			            <div class="media">
+			                <a class="pull-left" href="#">
+			                    <img class="media-object" src="images/1.jpg"
+			                         alt="通用的占位符图像" style="width:30px;height:30px;">
+			                </a>
+			                <div class="media-body">
+			                    <h4 class="media-heading">嵌套的媒体标题</h4>
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                    这是一些示例文本。这是一些示例文本。
+			                </div>
+			            </div>
+			        </div>
+			    </li>
+			    <li class="media">
+			        <a class="pull-right" href="#">
+			            <img class="media-object" src="images/1.jpg"
+			                 alt="通用的占位符图像" style="width:30px;height:30px;">
+			        </a>
+			        <div class="media-body">
+			            <h4 class="media-heading">媒体标题</h4>
+			            这是一些示例文本。这是一些示例文本。
+			            这是一些示例文本。这是一些示例文本。
+			            这是一些示例文本。这是一些示例文本。
+			            这是一些示例文本。这是一些示例文本。
+			            这是一些示例文本。这是一些示例文本。
+			        </div>
+			    </li>
+			</ul>
+
+
+	      
+        </div> <!-- col-xs-9 -->
+    </div>
+	    
+	 </div> <!-- /container -->
+
+
+
+    <div class="footer">
+    	<p>Copyright &copy By ZhiweiZHENG 2016-xxxx </p>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/outbox.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<script>
+	$(function () { //popover
+		$("[data-toggle='popover']").popover();
+	});
+	$(document).ready(function(){ //左侧导航栏
+	    $("#myNav").affix({
+	        offset: { 
+	            top: 100
+	      }
+	    });
+	});
+	$(function () { $('#collapseOne').collapse('hide')});
+	
+	</script>
+</body>
+</html>
